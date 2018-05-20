@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Controllers.ProductsSoldAnchorController">
+   <children>
+      <AnchorPane prefHeight="675.0" prefWidth="977.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="227.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <LineChart fx:id="graphView" layoutX="55.0" layoutY="76.0" prefHeight="675.0" prefWidth="973.0" title="Revenue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <xAxis>
+                <NumberAxis label="Days" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" label="Sales" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children></AnchorPane>
+      <VBox layoutX="977.0" layoutY="194.0" prefHeight="675.0" prefWidth="223.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="977.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXCheckBox fx:id="dailyCheck" text="Daily">
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="weeklyCheck" text="Weekly">
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+            </JFXCheckBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.Controllers.ProductsAnchorController">
+   <children>
+      <VBox layoutX="977.0" prefHeight="675.0" prefWidth="223.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="977.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label contentDisplay="CENTER" text="Search Product">
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Barcode">
+               <VBox.margin>
+                  <Insets left="20.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="barcodeField" onKeyReleased="#autoComplete">
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="30.0" layoutY="25.0" text="Name">
+               <VBox.margin>
+                  <Insets left="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nameField" layoutX="25.0" layoutY="57.0" onKeyReleased="#autoComplete">
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="30.0" layoutY="97.0" text="Price">
+               <VBox.margin>
+                  <Insets left="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="priceField" layoutX="25.0" layoutY="129.0" onKeyReleased="#autoComplete">
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="10.0" layoutY="154.0" text="Amount">
+               <VBox.margin>
+                  <Insets left="20.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="amountField" layoutX="10.0" layoutY="171.0" onKeyReleased="#autoComplete">
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" text="Submit">
+               <VBox.margin>
+                  <Insets left="145.0" top="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onMousePressed="#addToCart" prefHeight="57.0" prefWidth="139.0" text="Add To Cart">
+               <VBox.margin>
+                  <Insets left="50.0" top="100.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <TreeTableView fx:id="productsView" prefHeight="675.0" prefWidth="703.0" />
+      <TreeTableView fx:id="customerCart" layoutX="703.0" layoutY="-1.0" prefHeight="675.0" prefWidth="274.0" />
+   </children>
+</AnchorPane>
